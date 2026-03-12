@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
+import portfolio5 from "@/assets/portfolio-5.jpg";
 
 const projects = [
   {
@@ -16,7 +17,12 @@ const projects = [
   },
   {
     image: portfolio4,
-    title: "SMM-кампания для косметического бренда",
+    title: "SMM-кампания для косметического бренда — Desktop",
+    category: "SMM · Контент-маркетинг",
+  },
+  {
+    image: portfolio5,
+    title: "SMM-кампания для косметического бренда — Mobile",
     category: "SMM · Контент-маркетинг",
   },
 ];
