@@ -16,7 +16,7 @@ const projects = [
   },
   {
     image: portfolio4,
-    title: "SMM-кампания для fashion-бренда",
+    title: "SMM-кампания для косметического бренда",
     category: "SMM · Контент-маркетинг",
   },
 ];
