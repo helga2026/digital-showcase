@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
@@ -6,26 +8,50 @@ import portfolio5 from "@/assets/portfolio-5.jpg";
 
 const projects = [
   {
-    image: portfolio2,
+    images: [portfolio2],
     title: "Брендинг для отеля «Unkinda»",
     category: "Айдентика · Фирменный стиль",
   },
   {
-    image: portfolio3,
+    images: [portfolio3],
     title: "Редизайн сайта Clever Studio",
     category: "Веб-дизайн · UX/UI",
   },
   {
-    image: portfolio4,
-    title: "SMM-кампания для косметического бренда — Desktop",
-    category: "SMM · Контент-маркетинг",
-  },
-  {
-    image: portfolio5,
-    title: "SMM-кампания для косметического бренда — Mobile",
+    images: [portfolio4, portfolio5],
+    title: "SMM-кампания для косметического бренда",
     category: "SMM · Контент-маркетинг",
   },
 ];
+
+const ImageCarousel = ({ images, alt }: { images: string[]; alt: string }) => {
+  const [current, setCurrent] = useState(0);
+  if (images.length === 1) {
+    return <img src={images[0]} alt={alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />;
+  }
+  return (
+    <div className="relative w-full h-full">
+      <img src={images[current]} alt={`${alt} ${current + 1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+      <button
+        onClick={(e) => { e.stopPropagation(); setCurrent((c) => (c - 1 + images.length) % images.length); }}
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/70 backdrop-blur-sm rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+      >
+        <ChevronLeft className="h-4 w-4 text-foreground" />
+      </button>
+      <button
+        onClick={(e) => { e.stopPropagation(); setCurrent((c) => (c + 1) % images.length); }}
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/70 backdrop-blur-sm rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+      >
+        <ChevronRight className="h-4 w-4 text-foreground" />
+      </button>
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+        {images.map((_, idx) => (
+          <span key={idx} className={`block w-1.5 h-1.5 rounded-full transition-colors ${idx === current ? "bg-foreground" : "bg-foreground/40"}`} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const PortfolioSection = () => {
   return (
@@ -49,7 +75,7 @@ const PortfolioSection = () => {
           Избранные проекты
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
@@ -60,11 +86,7 @@ const PortfolioSection = () => {
               className="group cursor-pointer"
             >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
+                <ImageCarousel images={project.images} alt={project.title} />
               </div>
               <h3 className="font-display text-lg font-medium mb-1">
                 {project.title}
