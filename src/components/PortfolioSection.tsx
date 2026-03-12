@@ -49,7 +49,7 @@ const PortfolioSection = () => {
           Избранные проекты
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
