@@ -22,7 +22,7 @@ const projects = [
   },
   {
     images: [portfolio3],
-    title: "Редизайн сайта Clever Studio",
+    title: "Упаковка группы в ВК Метаморфозы",
     category: "Веб-дизайн · UX/UI",
   },
   {
