@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
+import portfolio4 from "@/assets/portfolio-4.png";
+import portfolio5 from "@/assets/portfolio-5.png";
+import portfolio6 from "@/assets/portfolio-6.png";
+import portfolio7 from "@/assets/portfolio-7.png";
+import portfolio8 from "@/assets/portfolio-8.png";
 
 const projects = [
   {
@@ -18,8 +21,8 @@ const projects = [
     category: "Веб-дизайн · UX/UI",
   },
   {
-    images: [portfolio4, portfolio5],
-    title: "SMM-кампания для косметического бренда",
+    images: [portfolio4, portfolio5, portfolio6, portfolio7, portfolio8],
+    title: "SMM-кампания Faberlic",
     category: "SMM · Контент-маркетинг",
   },
 ];
