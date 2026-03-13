@@ -8,6 +8,11 @@ import portfolio5 from "@/assets/portfolio-5.png";
 import portfolio6 from "@/assets/portfolio-6.png";
 import portfolio7 from "@/assets/portfolio-7.png";
 import portfolio8 from "@/assets/portfolio-8.png";
+import portfolio9 from "@/assets/portfolio-9.png";
+import portfolio10 from "@/assets/portfolio-10.png";
+import portfolio11 from "@/assets/portfolio-11.png";
+import portfolio12 from "@/assets/portfolio-12.png";
+import portfolio13 from "@/assets/portfolio-13.jpg";
 
 const projects = [
   {
@@ -24,6 +29,11 @@ const projects = [
     images: [portfolio4, portfolio5, portfolio6, portfolio7, portfolio8],
     title: "SMM-кампания Faberlic",
     category: "SMM · Контент-маркетинг",
+  },
+  {
+    images: [portfolio9, portfolio10, portfolio11, portfolio12, portfolio13],
+    title: "Коллекция зима 2024",
+    category: "Презентация коллекции",
   },
 ];
 
