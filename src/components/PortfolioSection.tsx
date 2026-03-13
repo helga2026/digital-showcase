@@ -23,7 +23,7 @@ const projects = [
   {
     images: [portfolio3],
     title: "Упаковка группы в ВК Метаморфозы",
-    category: "Веб-дизайн · UX/UI",
+    category: "SMM · Оформление сообщества",
   },
   {
     images: [portfolio4, portfolio5, portfolio6, portfolio7, portfolio8],
