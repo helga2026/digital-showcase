@@ -13,6 +13,16 @@ import portfolio10 from "@/assets/portfolio-10.png";
 import portfolio11 from "@/assets/portfolio-11.png";
 import portfolio12 from "@/assets/portfolio-12.png";
 import portfolio13 from "@/assets/portfolio-13.jpg";
+import vkMeta1 from "@/assets/vk-meta-1.png";
+import vkMeta2 from "@/assets/vk-meta-2.png";
+import vkMeta3 from "@/assets/vk-meta-3.png";
+import vkMeta4 from "@/assets/vk-meta-4.png";
+import vkMeta5 from "@/assets/vk-meta-5.png";
+import vkMeta6 from "@/assets/vk-meta-6.jpg";
+import vkMeta7 from "@/assets/vk-meta-7.png";
+import vkMeta8 from "@/assets/vk-meta-8.png";
+import vkMeta9 from "@/assets/vk-meta-9.png";
+import vkMeta10 from "@/assets/vk-meta-10.png";
 
 const projects = [
   {
@@ -21,9 +31,14 @@ const projects = [
     category: "Айдентика · Фирменный стиль",
   },
   {
-    images: [portfolio3],
+    images: [portfolio3, vkMeta1, vkMeta2, vkMeta3, vkMeta4],
     title: "Упаковка группы в ВК Метаморфозы",
     category: "SMM · Оформление сообщества",
+  },
+  {
+    images: [vkMeta5, vkMeta6, vkMeta7, vkMeta8, vkMeta9, vkMeta10],
+    title: "Визуальный контент Метаморфозы",
+    category: "SMM · Мокапы и презентация",
   },
   {
     images: [portfolio4, portfolio5, portfolio6, portfolio7, portfolio8],
