@@ -32,7 +32,7 @@ const projects = [
   },
   {
     images: [portfolio9, portfolio10, portfolio11, portfolio12, portfolio13],
-    title: "Коллекция зима 2024",
+    title: "Коллекция весна 2026",
     category: "Презентация коллекции",
   },
 ];
